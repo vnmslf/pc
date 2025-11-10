@@ -1,0 +1,65 @@
+@import "../../../../scss/style";
+.footer__menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 40px;
+	.footer__menu-left {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		gap: 18px;
+		h5 {
+			color: $white;
+			margin: 0;
+		}
+		ul {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			margin: 0;
+			padding: 0;
+			li {
+				list-style-type: none;
+				a {
+					color: $white;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	.footer__menu-right {
+		img {
+			width: 120px;
+		}
+	}
+	@include media-down(large) {
+		.footer__menu-right {
+			display: none;
+		}
+	}
+	@include media-down(medium) {
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		.footer__menu-right {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+	}
+}

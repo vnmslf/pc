@@ -1,0 +1,1299 @@
+@import './../scss/style';
+
+header {
+	position: relative;
+	background: $dirty_blue;
+	overflow: hidden;
+	@include transition-default;
+	.container {
+		$header-top-margin: 36px;
+		$header-lr-padding: 8px;
+		.header__top-bar {
+			position: fixed;
+			z-index: 2;
+			width: calc(100% - $header-lr-padding * 2);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			color: $white;
+			background: $dirty_blue;
+			min-height: $header-top-margin;
+			padding: 0 $header-lr-padding;
+			@include transition-default;
+			@include infinity-background;
+			.left {
+				display: flex;
+				flex-direction: row;
+				gap: 10px;
+				a {
+					text-decoration: none;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					@include transition-default;
+					svg {
+						fill: $white;
+						width: 20px;
+						height: 20px;
+						path {
+							&.background {
+								fill: $dirty_blue;
+							}
+						}
+					}
+				}
+			}
+			.center {
+			}
+			.right {
+				a {
+					color: $white;
+					text-decoration: none;
+					display: flex;
+					flex-direction: row;
+					gap: 6px;
+					justify-content: center;
+					align-items: center;
+					@include transition-default;
+					svg {
+						width: 20px;
+						path {
+							fill: $white;
+						}
+					}
+					span {
+						@include transition-default;
+					}
+				}
+			}
+			&:hover {
+				background: $light_gray;
+			}
+		}
+		.header__middle {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			z-index: 1;
+			min-height: 60px;
+			margin-top: $header-top-margin;
+			padding: 0 8px;
+			.left {
+				a {
+					text-decoration: none;
+					display: flex;
+					svg {
+						width: 120px;
+						path {
+							fill: $white;
+						}
+					}
+				}
+			}
+			.center {
+				position: fixed;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: flex;
+				background: rgba($dirty_blue, .9);
+				transform: translateY(100%);
+				@include transition-default;
+			}
+			.right {
+				.contacts {
+					.contacts__block {
+						a {
+							color: $white;
+							text-decoration: none;
+							display: flex;
+							flex-direction: row;
+							gap: 6px;
+							justify-content: flex-start;
+							align-items: center;
+							@include transition-default;
+							svg {
+								width: 20px;
+								path {
+									fill: $white;
+								}
+								rect {
+								}
+							}
+							span {
+								@include transition-default;
+							}
+						}
+					}
+				}
+			}
+		}
+		.management {
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $dirty_blue;
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+			min-height: 44px;
+			@include transition-default;
+			.management__menu-button {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 0 10px;
+				gap: 4px;
+				min-height: 100%;
+				user-select: none;
+				cursor: pointer;
+				svg {
+					width: 24px;
+					path {
+						fill: $white;
+					}
+				}
+				span {
+					color: $white;
+				}
+			}
+			.menu {
+				display: none;
+			}
+		}
+	}
+	&:hover {
+		// background: $white;
+		box-shadow: 0px 0px 2px rgba($dirty_blue, .5);
+		.container {
+			.header__top-bar {
+				.left {
+					a {
+						svg {
+							path {
+								&.background {
+								}
+							}
+						}
+						&:hover {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					a {
+						svg {
+							path {
+							}
+						}
+						span {
+						}
+						&:hover {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+						}
+					}
+				}
+				&:hover {
+					background: $white;
+					.left {
+						a {
+							svg {
+								path {
+									fill: $dirty_blue;
+									&.background {
+										fill: $white;
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										fill: $black;
+										&.background {
+											fill: $white;
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+									fill: $dirty_blue;
+								}
+							}
+							span {
+								color: $dirty_blue;
+							}
+							&:hover {
+								svg {
+									path {
+										fill: $black;
+									}
+								}
+								span {
+									color: $black;
+								}
+							}
+						}
+					}
+				}
+			}
+			.header__middle {
+				@include transition-default;
+				@include infinity-background;
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+						&:hover {
+							svg {
+								path {
+								}
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+								svg {
+									path {
+									}
+									rect {
+									}
+								}
+								span {
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										fill: $black;
+									}
+								}
+								span {
+									color: $black;
+								}
+							}
+						}
+					}
+				}
+				&:hover {
+					background: $white;
+					.left {
+						a {
+							svg {
+								path {
+									fill: $dirty_blue;
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										fill: $black;
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						.contacts {
+							.contacts__block {
+								a {
+									svg {
+										path {
+											fill: $dirty_blue;
+										}
+										rect {
+										}
+									}
+									span {
+										color: $dirty_blue;
+									}
+								}
+								&:hover {
+									svg {
+										path {
+											fill: $black;
+										}
+									}
+									span {
+										color: $black;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.menu-open {
+		.container {
+			.header__middle {
+				.center {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+	@include media-up(smallest) {
+		.container {
+			.header__top-bar {
+				.left {
+					a {
+						svg {
+							path {
+								&.background {
+								}
+							}
+						}
+						&:hover {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					a {
+						svg {
+							path {
+							}
+						}
+						span {
+						}
+						&:hover {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+						}
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(small) {
+		.container {
+			.header__top-bar {
+				.left {
+					a {
+						svg {
+							path {
+								&.background {
+								}
+							}
+						}
+						&:hover {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					a {
+						svg {
+							path {
+							}
+						}
+						span {
+						}
+						&:hover {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+						}
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xsmall) {
+		.container {
+			$header-top-margin: 50px;
+			$header-lr-padding: 16px;
+			.header__top-bar {
+				width: calc(100% - $header-lr-padding * 2);
+				min-height: $header-top-margin;
+				padding: 0 $header-lr-padding;
+				.left {
+					a {
+						svg {
+							path {
+								&.background {
+								}
+							}
+						}
+						&:hover {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					a {
+						svg {
+							path {
+							}
+						}
+						span {
+						}
+						&:hover {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+						}
+					}
+				}
+			}
+			.header__middle {
+				margin-top: $header-top-margin;
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			$header-lr-padding: 0;
+			.header__top-bar {
+				max-width: inherit;
+				padding: 0;
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				padding: 0;
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xmedium) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(large) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+					display: none;
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+			.management {
+				position: relative;
+				z-index: 3;
+				min-height: 34px;
+				@include infinity-background;
+				.management__menu-button {
+					padding: 0;
+					svg {
+						path {
+						}
+					}
+					span {
+					}
+					&.catalog-button {
+						display: none;
+					}
+					&.order-button {
+						background: rgba($black, .1);
+						border: 1px solid rgba($black, .2);
+						border-bottom: none;
+						padding: 0 16px;
+						@include transition-default;
+						&:hover {
+							background: $black;
+							transform: translateY(-4px);
+						}
+					}
+				}
+				&.fixed {
+					position: fixed;
+					top: 0;
+					bottom: unset;
+					max-width: inherit;
+					transform: translateY(50px);
+					.management__menu-button {
+					}
+				}
+				.menu {
+					display: flex;
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xlarge) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xxlarge) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(prewide) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(wide) {
+		.container {
+			.header__top-bar {
+				.left {
+				}
+				.center {
+				}
+				.right {
+					a {
+					}
+				}
+			}
+			.header__middle {
+				.left {
+					a {
+						svg {
+							path {
+							}
+						}
+					}
+				}
+				.center {
+				}
+				.right {
+					.contacts {
+						.contacts__block {
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			.container {
+				.header__top-bar {
+					.left {
+						a {
+							svg {
+								path {
+									&.background {
+									}
+								}
+							}
+							&:hover {
+								svg {
+									path {
+										&.background {
+										}
+									}
+								}
+							}
+						}
+					}
+					.center {
+					}
+					.right {
+						a {
+							svg {
+								path {
+								}
+							}
+							span {
+							}
+							&:hover {
+								svg {
+									path {
+									}
+								}
+								span {
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#panel + header {
+	z-index: 10000;
+}

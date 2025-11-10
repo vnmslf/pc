@@ -1,0 +1,234 @@
+@import './../scss/style';
+
+body {
+	margin: 0;
+	font-family: 'Verdana', sans-serif;
+	font-size: 14px;
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+}
+@include media-up(smallest) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+	}
+}
+@include media-up(small) {
+	body {
+	}
+	h1 {
+		font-size: 32px;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	h5 {
+		font-size: 18px;
+	}
+	h6 {
+		font-size: 16px;
+	}
+	.container {
+	}
+}
+@include media-up(xsmall) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+	}
+}
+@include media-up(medium) {
+	body {
+	}
+	h1 {
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 24px;
+	}
+	h5 {
+		font-size: 20px;
+	}
+	h6 {
+	}
+	.container {
+		max-width: 728px;
+		margin: 0 auto;
+	}
+}
+@include media-up(xmedium) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+		max-width: 862px;
+	}
+}
+@include media-up(large) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	h4 {
+		font-size: 28px;
+	}
+	h5 {
+		font-size: 22px;
+	}
+	h6 {
+		font-size: 18px;
+	}
+	.container {
+		max-width: 944px;
+	}
+}
+@include media-up(xlarge) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+		max-width: 1180px;
+	}
+}
+@include media-up(xxlarge) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+		max-width: 1300px;
+	}
+}
+@include media-up(prewide) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+	}
+}
+@include media-up(wide) {
+	body {
+	}
+	h1 {
+	}
+	h2 {
+	}
+	h3 {
+	}
+	h4 {
+	}
+	h5 {
+	}
+	h6 {
+	}
+	.container {
+	}
+}

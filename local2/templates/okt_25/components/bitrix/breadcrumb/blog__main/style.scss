@@ -1,0 +1,41 @@
+@import "../../../../scss/style";
+.container {
+	.bx-breadcrumb {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 100%;
+		        flex: 0 0 100%;
+		gap: 12px;
+		margin: 8px 0;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		.bx-breadcrumb-item {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			gap: 12px;
+			i {
+				&.fa {
+					line-height: 140%;
+				}
+			}
+		}
+	}
+	@include media-up(large) {
+		-ms-flex-wrap: unset;
+		    flex-wrap: unset;
+	}
+}

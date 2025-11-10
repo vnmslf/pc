@@ -1,0 +1,568 @@
+@import "../../../../scss/style";
+section.hero {
+	overflow: hidden;
+	.container {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		.hero__left {
+			.hero__precapt {
+				font-weight: 900;
+				font-size: 16px;
+				text-align: center;
+			}
+			h1 {
+				text-align: center;
+			}
+			p {
+				color: $black;
+				font-size: 14px;
+				line-height: 18px;
+				background: rgba($white, .7);
+				border: 1px solid $white;
+				padding: 10px;
+			}
+			.hero__props {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				gap: 12px;
+				.prop {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					    -ms-flex-direction: row;
+					        flex-direction: row;
+					-webkit-box-align: center;
+					    -ms-flex-align: center;
+					        align-items: center;
+					-ms-flex-wrap: wrap;
+					    flex-wrap: wrap;
+					-webkit-box-pack: justify;
+					    -ms-flex-pack: justify;
+					        justify-content: space-between;
+					gap: 2px;
+					.prop__number {
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						font-size: 2rem;
+						line-height: 2rem;
+						font-weight: 700;
+						color: $black;
+						span {
+							color: $red;
+						}
+					}
+					h3 {
+						margin: 0;
+						font-weight: 900;
+						text-align: center;
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 calc(100% - 84px);
+						        flex: 0 0 calc(100% - 84px);
+					}
+					& > span {
+						font-size: 1.3rem;
+						color: $black;
+						text-align: center;
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 100%;
+						        flex: 0 0 100%;
+						-webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						        justify-content: center;
+						-ms-flex-wrap: wrap;
+						    flex-wrap: wrap;
+						& > span {
+							font-weight: 900;
+							-webkit-box-flex: 0;
+							    -ms-flex: 0 0 100%;
+							        flex: 0 0 100%;
+						}
+					}
+				}
+			}
+		}
+		.hero__right {
+			picture {
+				width: calc(100% + 2rem);
+				position: relative;
+				left: -1rem;
+				img {
+					max-width: unset;
+				}
+			}
+		}
+	}
+	@include media-up(smallest) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(small) {
+		overflow: hidden;
+		.container {
+			position: relative;
+			.hero__left {
+				position: relative;
+				z-index: 2;
+				margin: 2rem 1rem;
+				padding: 1rem;
+				background: rgba($white, .6);
+				border: 1px solid $white;
+				.hero__precapt {
+					font-weight: 900;
+					font-size: 16px;
+					text-align: center;
+				}
+				h1 {
+					text-align: center;
+				}
+				p {
+					color: $black;
+					font-size: 14px;
+					line-height: 18px;
+					background: rgba($white, .7);
+					border: 1px solid $white;
+					padding: 10px;
+				}
+				.hero__props {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					    -ms-flex-direction: row;
+					        flex-direction: row;
+					-ms-flex-wrap: wrap;
+					    flex-wrap: wrap;
+					-webkit-box-pack: center;
+					    -ms-flex-pack: center;
+					        justify-content: center;
+					-webkit-box-align: center;
+					    -ms-flex-align: center;
+					        align-items: center;
+					gap: 12px;
+					.prop {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-orient: vertical;
+						-webkit-box-direction: normal;
+						    -ms-flex-direction: column;
+						        flex-direction: column;
+						-webkit-box-align: center;
+						    -ms-flex-align: center;
+						        align-items: center;
+						gap: 2px;
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 calc(50% - 6px);
+						        flex: 0 0 calc(50% - 6px);
+						.prop__number {
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-flex: 0;
+							    -ms-flex: 0 0 100%;
+							        flex: 0 0 100%;
+							-webkit-box-pack: center;
+							    -ms-flex-pack: center;
+							        justify-content: center;
+							font-size: 4rem;
+							line-height: 4rem;
+							font-weight: 900;
+							color: $black;
+							span {
+								color: $red;
+							}
+						}
+						h3 {
+							margin: 0;
+							font-weight: 900;
+							text-align: center;
+						}
+						& > span {
+							font-size: 1.3rem;
+							color: $black;
+							text-align: center;
+							& > span {
+								font-weight: 900;
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				position: absolute;
+				z-index: 1;
+				width: 150%;
+				height: 100%;
+				top: 0;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				        transform: translateX(-50%);
+				picture {
+					img {
+						max-width: unset;
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xsmall) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					-webkit-box-align: start;
+					    -ms-flex-align: start;
+					        align-items: start;
+					.prop {
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 calc(33% - 6px);
+						        flex: 0 0 calc(33% - 6px);
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							font-size: 1.1rem;
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				left: 55%;
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xmedium) {
+		.container {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			.hero__left {
+				margin: 0;
+				padding: 0;
+				background: none;
+				border: none;
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 50%;
+				        flex: 0 0 50%;
+				-ms-flex-item-align: center;
+				    -ms-grid-row-align: center;
+				    align-self: center;
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					-ms-flex-pack: distribute;
+					    justify-content: space-around;
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				position: relative;
+				width: 464px;
+				height: auto;
+				max-height: 700px;
+				left: unset;
+				top: unset;
+				-webkit-transform: unset;
+				        transform: unset;
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 50%;
+				        flex: 0 0 50%;
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(large) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xlarge) {
+		.container {
+			.hero__left {
+				background: $white;
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: -100%;
+					left: 0;
+					right: 0;
+					bottom: -100%;
+					background: $white;
+				}
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					overflow: hidden;
+					img {
+						-webkit-transform: translateX(-25%);
+						        transform: translateX(-25%);
+					}
+				}
+			}
+		}
+	}
+	@include media-up(xxlarge) {
+		.container {
+			.hero__left {
+				padding: 0 30px;
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 calc(50% - 6px);
+						        flex: 0 0 calc(50% - 6px);
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(prewide) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+	@include media-up(wide) {
+		.container {
+			.hero__left {
+				.hero__precapt {
+				}
+				h1 {
+				}
+				p {
+				}
+				.hero__props {
+					.prop {
+						.prop__number {
+							span {
+							}
+						}
+						h3 {
+						}
+						& > span {
+							& > span {
+							}
+						}
+					}
+				}
+			}
+			.hero__right {
+				picture {
+					img {
+					}
+				}
+			}
+		}
+	}
+}

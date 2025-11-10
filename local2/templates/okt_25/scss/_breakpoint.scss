@@ -1,0 +1,38 @@
+@function get-breakpoint-value($query, $data) {
+	$value: null;
+
+	@if type-of($query) == "number" {
+		$value: $query;
+	}
+
+	@if type-of($query) == "string" {
+		$value: map-get($data, $query);
+	}
+
+	@return $value;
+}
+
+@mixin media-up($query, $data: $breakpoints) {
+	$value: get-breakpoint-value($query, $data);
+
+	@media (min-width: $value) {
+		@content;
+	}
+}
+
+@mixin media-down($query, $data: $breakpoints) {
+	$value: get-breakpoint-value($query, $data);
+
+	@media (max-width: $value - 0.02px) {
+		@content;
+	}
+}
+
+@mixin media-between($min-query, $max-query, $data: $breakpoints) {
+	$min-value: get-breakpoint-value($min-query, $data);
+	$max-value: get-breakpoint-value($max-query, $data);
+
+	@media (max-width: $max-value - 0.02px) and (min-width: $min-value) {
+		@content;
+	}
+}

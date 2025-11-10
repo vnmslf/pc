@@ -1,0 +1,98 @@
+@import "../../../../../../../scss/style";
+.listing {
+	margin-bottom: 20px;
+	.container {
+		.list__blocks {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			gap: 40px;
+			.block {
+				@include default-transition();
+				h2 {
+					@include default-transition();
+				}
+			}
+			&:hover {
+				.block {
+					opacity: .7;
+					@include default-transition();
+					&:hover {
+						opacity: 1;
+						@include default-transition();
+						h2 {
+							color: $black;
+						}
+					}
+				}
+			}
+			.block {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 calc(50% - 20px);
+				        flex: 0 0 calc(50% - 20px);
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+				@include media-down(large) {
+					-webkit-box-flex: 0;
+					    -ms-flex: 0 0 100%;
+					        flex: 0 0 100%;
+				}
+				.list {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					    -ms-flex-direction: column;
+					        flex-direction: column;
+					gap: 20px;
+					.item {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-orient: vertical;
+						-webkit-box-direction: normal;
+						    -ms-flex-direction: column;
+						        flex-direction: column;
+						gap: 4px;
+						text-decoration: none;
+						.info {
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-orient: horizontal;
+							-webkit-box-direction: normal;
+							    -ms-flex-direction: row;
+							        flex-direction: row;
+							-webkit-box-align: center;
+							    -ms-flex-align: center;
+							        align-items: center;
+							gap: 2px;
+							.link {
+								@include default-transition();
+								@include btn-small();
+								@include btn-color-default($red);
+								text-decoration: none;
+								margin-left: auto;
+								&:hover {
+									@include btn-color-default($black);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
